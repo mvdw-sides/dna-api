@@ -1,0 +1,45 @@
+{
+  "name": "aws-nodejs-typescript",
+  "version": "1.0.0",
+  "description": "DNA application.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "dev": "STORAGE_LOCATION=$PWD sls offline"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.27",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.8",
+    "@types/webpack": "^4.4.32",
+    "aws-lambda-mock-context": "^3.2.1",
+    "jest": "^24.8.0",
+    "serverless": "^1.44.1",
+    "serverless-offline": "^5.3.3",
+    "serverless-webpack": "^5.3.1",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.33.0"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
+}
