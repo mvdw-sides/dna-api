@@ -32,10 +32,48 @@ _Body:_
 
 > `{"string": "ACTGACTGACTGACTG"}`
 
+##### Query information
+
 | field        | type       |
 | ------------ | ---------- |
 | search-query | string     |
 | distance     | number/int |
+
+##### Response format
+
+The find request always returns an array with objects.
+
+```
+[
+  {
+    "string": "string"
+    "score": "number"
+  }
+]
+```
+
+For example:
+
+```
+[
+  {
+    "string": "ACTGACTGACTGACTGACTGACTG",
+    "score": 16
+  },
+  {
+    "string": "ACTGACTGACTG",
+    "score": 8
+  },
+  {
+    "string": "GTACCCAAGGTTGGAAACCC",
+    "score": 14
+  },
+  {
+    "string": "GGAACCGGTTCCAAAGGGT",
+    "score": 34
+  }
+]
+```
 
 ## 2. Setup
 
