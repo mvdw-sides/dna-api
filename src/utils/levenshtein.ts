@@ -1,10 +1,14 @@
 import { match, scoredObject } from "../types";
 
 export const levenshtein = (search: string, match: string): number => {
-  if (search.length == 0) return match.length;
-  if (match.length == 0) return search.length;
+  if (search.length == 0) {
+    return match.length;
+  }
+  if (match.length == 0) {
+    return search.length;
+  }
 
-  var matrix = [];
+  const matrix: Array<Array<number>> = [];
 
   for (let i: number = 0; i <= match.length; i++) {
     matrix[i] = [i];
@@ -16,7 +20,7 @@ export const levenshtein = (search: string, match: string): number => {
 
   for (let i: number = 1; i <= match.length; i++) {
     for (let j: number = 1; j <= search.length; j++) {
-      if (match.charAt(i - 1) == search.charAt(j - 1)) {
+      if (match.charAt(i - 1) === search.charAt(j - 1)) {
         matrix[i][j] = matrix[i - 1][j - 1];
       } else {
         matrix[i][j] = Math.min(
