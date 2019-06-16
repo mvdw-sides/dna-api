@@ -20,7 +20,7 @@ export default class Store {
   }
 
   create(elem: string) {
-    console.log(`Adding ${elem}(${elem.toLocaleLowerCase()})`);
+    console.log(`Adding ${elem}(${elem.toLowerCase()})`);
 
     try {
       this.storage.push(elem.toLowerCase());
@@ -33,7 +33,7 @@ export default class Store {
   }
 
   find(query: string) {
-    const q = query.toLocaleLowerCase();
+    const q = query.toLowerCase();
     console.log(`Looking for ${query}(${q})`);
     return this.storage.filter((record: string) => record.includes(q));
   }

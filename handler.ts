@@ -27,7 +27,7 @@ export const find = async (event: APIGatewayEvent) => {
       store.find(query).map(string => {
         return { string };
       }),
-      query.toLocaleLowerCase()
+      query.toLowerCase()
     );
 
     if (queryString && queryString.distance) {

@@ -27,7 +27,7 @@ describe("Test the simple Storage utility", () => {
 
     const found = store.find("CCT");
     expect(found.length).toBe(2);
-    expect(found[0]).toBe("FFCCTTGGAATTCCFF".toLocaleLowerCase());
-    expect(found[1]).toBe("FFFAAACCTTTGGGCCC".toLocaleLowerCase());
+    expect(found[0]).toBe("FFCCTTGGAATTCCFF".toLowerCase());
+    expect(found[1]).toBe("FFFAAACCTTTGGGCCC".toLowerCase());
   });
 });
